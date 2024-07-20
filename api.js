@@ -4,9 +4,10 @@ const bodyPaser = require("body-parser");
 
 const app = express();
 app.use(bodyPaser.json());
+const port = process.env.PORT || 3300;
 
-app.listen(3300, () => {
-  console.log(`Sever is now listening at port 3300`);
+app.listen(port, () => {
+  console.log(`Sever is now listening at port ${port}`);
 });
 
 client.connect();
